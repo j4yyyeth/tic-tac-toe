@@ -6,7 +6,6 @@ const App = () => {
   const [ game, setGame ] = useState('Continuing');
   
   const handleTurn = (index: number) => {
-    console.log(index);
     turn === 'X' ? setTurn('O') : setTurn('X');
     const newNumArr = [...numArr];
     turn === 'X' ? newNumArr[index] = 'X' : newNumArr[index] = 'O';
@@ -32,7 +31,6 @@ const App = () => {
           ||
           (numArr[7] === 'X' && numArr[4] === 'X' && numArr[1] === 'X') || (numArr[4] === 'O' && numArr[7] === 'O' && numArr[1] === 'O')
       ) {
-        console.log("WINNER");
         setGame('Over');
       }
     }
